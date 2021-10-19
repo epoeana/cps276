@@ -1,9 +1,7 @@
 <?php
-
 	require_once 'addNameProc.php'; 
 	$addName = new AddNamesProc(); 
 	$output = $addName->formValidateFunc();
-
 ?>
 
 <!DOCTYPE html>
@@ -36,11 +34,9 @@
 		<div class="col-md-12">
 			<label for="nameList" class="form-label">List of Name</label>
 			<textarea style="height: 500px" class="form-control" id="nameList" name="nameList">
-			<ol>
-				<li>
+		
 				<?php echo $output ?>
-				</li>
-			</ol>	
+				
 			</textarea>
 		</div>
 		</form>

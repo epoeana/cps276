@@ -11,7 +11,7 @@ class AddNamesProc {
 	private function addNameFunc() {
 
 		// If no name is entered, send an alert to the screen
-		if(trim($_POST["fullName"]) == NULL)
+		if(($_POST["fullName"]) == NULL)
 		{
 			echo '<script language="javascript">';
 			echo 'alert("Invalid Entry")';
@@ -20,9 +20,9 @@ class AddNamesProc {
 		}
 
 		// Seperate the full name with a coma 
-		$newName = explode(" ",trim($_POST["fullName"]));
+		$newName = explode(" ",($_POST["fullName"]));
 		$seperateName = $newName[1] .", " . $newName[0];
-		$sortArray = trim($_POST["nameList"]);
+		$sortArray = ($_POST["nameList"]);
 
 		// Sort the names
 		if(isset($sortArray))
@@ -43,7 +43,6 @@ class AddNamesProc {
 		}
 	}
 
-	
 	public function formValidateFunc() {
 		$nameList = NULL;
 		// If addName holder is set or clearNames is set then...
@@ -63,11 +62,8 @@ class AddNamesProc {
 			else{
 				echo "invalid request";
 			}
-
 			return $nameList;
 		}
 	}
 }
-
-
 ?>
