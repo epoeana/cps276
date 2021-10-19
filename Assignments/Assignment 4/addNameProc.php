@@ -1,9 +1,9 @@
 <?php
 
 class AddNamesProc {
+
 	// This function will clear names
 	private function clearNamesFunc() {
-		$_POST["clearNames"]= NULL;
 		return NULL;    
 	}
 
@@ -11,7 +11,7 @@ class AddNamesProc {
 	private function addNameFunc() {
 
 		// If no name is entered, send an alert to the screen
-		if(($_POST["fullName"]) == NULL)
+		if($_POST["fullName"] == NULL)
 		{
 			echo '<script language="javascript">';
 			echo 'alert("Invalid Entry")';
@@ -29,10 +29,7 @@ class AddNamesProc {
 		{
 			$sortArray .= "\n" .$seperateName;
 			$sortArray = explode("\n",$sortArray);
-			sort($sortArray, SORT_STRING | SORT_FLAG_CASE);
 			$sortArray = implode("\n",$sortArray);
-			$_POST["clearNames"] = NULL;
-			$_POST["addName"]= NULL;
 			return $sortArray;
 		} 
 
@@ -51,19 +48,19 @@ class AddNamesProc {
 			// add the name in addName list
 			if(isset($_POST["addName"])){
 				$nameList = $this->addNameFunc();
-				$_POST["addName"]= NULL;
 			} 
 			// if clearNames is clicked, clear the names
 			elseif (isset($_POST["clearNames"])){
 				$namelist = $this->clearNamesFunc();
-				$_POST["clearNames"]= NULL;
 			} 
-			// anything else is invalid
-			else{
-				echo "invalid request";
-			}
 			return $nameList;
 		}
 	}
 }
+
+// open issues
+// *spacing format in textarea still needs work
+// sorting might be causing the spacing issue
+
 ?>
+
