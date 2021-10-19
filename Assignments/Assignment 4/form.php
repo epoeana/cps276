@@ -29,7 +29,7 @@
 		</div>
 		<div class="col-md-12">
 			<label for="fullName" class="form-label">Enter Name</label>
-			<input type="text" class="form-control" id="fullName" name="fullName" alt="Form input for new name">
+			<input type="text" class="form-control" id="fullName" name="fullName">
 		</div>
 		<div class="col-md-12">
 			<label for="nameList" class="form-label">List of Name</label>
