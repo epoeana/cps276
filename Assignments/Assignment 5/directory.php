@@ -6,7 +6,7 @@ Class Directories{
     
         if(isset($post['submit'])){
             $directoryName = $post['directory'];
-            // check/create directory
+            // check/create directory and add permissions
             if(!is_dir('directories/' . $directoryName)){
                 if(mkdir('directories/' . $directoryName, 0777, true)){
                     chmod('directories/' . $directoryName, 0777);
