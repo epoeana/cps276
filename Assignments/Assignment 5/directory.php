@@ -2,17 +2,17 @@
 
 Class Directories{
     
-    public function addDirectory($post){
+    public function addDirectory($POST){
     
-        if(isset($post['submit'])){
-            $directoryName = $post['directory'];
+        if(isset($POST['submit'])){
+            $directoryName = $POST['directory'];
             // check/create directory and add permissions
             if(!is_dir('directories/' . $directoryName)){
                 if(mkdir('directories/' . $directoryName, 0777, true)){
                     chmod('directories/' . $directoryName, 0777);
                     $path = 'directories/' . $directoryName . "/";
                     $file = fopen($path . "readme.txt","w");
-                    if(!fwrite($file, $post['filecontent'])){
+                    if(!fwrite($file, $POST['filecontent'])){
                         fclose($file);
                         $validation = '<p style="color: red;">File could not be created.</p>';
                     }
