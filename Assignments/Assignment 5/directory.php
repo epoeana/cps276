@@ -14,7 +14,7 @@ Class Directories{
                     $file = fopen($path . "readme.txt","w");
                     if(!fwrite($file, $post['filecontent'])){
                         fclose($file);
-                        $validation = "File could not be created.";
+                        $validation = '<p style="color: red;">File could not be created.</p>';
                     }
                     else {  // display that file and directory was created successfull with path link
                         $validation = "File and Directory were created.";
@@ -26,7 +26,7 @@ Class Directories{
                   /*echo '<script language="javascript">';
 			        echo 'alert("Error: Directory could not be made.")';
 			        echo '</script>';*/
-                    $validation = "Error: Directory could not be made.";
+                    $validation = '<p style="color: red;">Error: Directory could not be made.</p>';
                     return $validation;
                 }
             }
@@ -34,7 +34,7 @@ Class Directories{
                   /*echo '<script language="javascript">';
 			        echo 'alert("A directory already exists with that name.")';
 			        echo '</script>';*/
-                    $validation = "A directory already exists with that name.";
+                    $validation = '<p style="color: red;">A directory already exists with that name.</p>';
                     return $validation;
             }
         }
