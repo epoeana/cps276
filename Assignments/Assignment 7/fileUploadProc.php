@@ -11,7 +11,7 @@ function processFile(){
     global $output;
 	//Check to see if a file was uploaded.  Error equals 4 means no file uploaded
 	if ($_FILES["file"]["error"] == 4){
-		$output = "No file was uploaded. Make sure you choose a file to upload.";
+		$output = "No file was uploaded. Choose a file.";
 	}
 
 	//Check file size less than 1000000 bytes
@@ -21,7 +21,7 @@ function processFile(){
 
 	//Check to make sure it is the correct file type, PDF
 	elseif ($_FILES["file"]["type"] != "application/pdf" ) {
-		$output = "<p>PDF files only, thanks!</p>";
+		$output = "<p>Only PDF files</p>";
 	}
     //Add file
 	else {	
