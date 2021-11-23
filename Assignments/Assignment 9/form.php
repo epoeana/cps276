@@ -40,7 +40,10 @@ if (count($_POST) > 0){
                 <div class="btn btn-primary">
                 <button type="submit" class="btn btn-primary" name="addNote">Add Note</button>
                 </div>
-
+                
+                <!-- Open issues
+                     *Having issue getting datebase to work properly -->
+            
             </form>
         </div>
     </body>

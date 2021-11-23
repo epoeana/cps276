@@ -19,38 +19,29 @@ if (count($_POST) > 0){
   </head>
 
     <body>
-        
-        <h2>Display Notes</h2> 
-        </nav>
         <div class="container">
-        <h5 class="mb-4"><a href="form.php">Add Note</a></h5>
+            <h1>Display Notes</h1>
+            <form method="post" action="#">
+                <p><a href ="form.php">Add Note<br><br></a>
 
-    <form action="#" method="post">
+                <div class="mb-2">            
+                <label for="begDate" class="mb-2">Beginning Date</label>  
+                <input type="date" class="form-control shadow-lg p-3 mb-2 bg-body rounded" id="begdate" name="begDate">
+                </div>
 
-        <div class="mb-2">            
-            <label for="begDate" class="mb-2"><b>Beginning Date</b></label>  
-            <input type="date" class="form-control shadow-lg p-3 mb-2 bg-body rounded" id="begdate" name="begDate">
+                <div class="mb-2">
+                <label for="endDate" class="mb-2">Ending Date</label>
+                <input type="date" class="form-control shadow-lg p-3 mb-2 bg-body rounded" id="endDate" name="endDate">
+                </div>
 
-        </div>
-
-        
-        <div class="mb-2">
-            <label for="endDate" class="mb-2"><b>Ending Date</b></label>
-            <input type="date" class="form-control shadow-lg p-3 mb-2 bg-body rounded" id="endDate" name="endDate">
-        </div>
-
-  <div class="mb-3">
-
-        <span class="badge rounded-pill bg-primary">
-             <button type="submit" class="btn btn-primary " name="getNotes" value="getNotes">Get Notes</button>                
-        </span>   
+                <div class="btn btn-primary">
+                <button type="submit" class="btn btn-primary" name="getNotes">Get Notes</button>
+                </div>  
     
-    </form>
-
-    <br>
-    <p><?php echo $table ?></p>
+            </form>
+            <br>
+            <p><?php echo $table ?></p>
     
-
+        </div>
     </body>
-</div>
 </html>
