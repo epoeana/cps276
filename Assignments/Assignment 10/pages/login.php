@@ -6,14 +6,11 @@ if (count($_POST) > 0){
     $stickyForm = new StickyForm();
 }
 
-
 function init()
 {
 
   global $output;
   global $elementsArr, $stickyForm;
-
-
 
   function login($post)
   {
@@ -32,8 +29,6 @@ function init()
     if ($records == 'error') {
       return "There was an error logging it";
     }
-
-    /** */
     else {
       if (count($records) != 0) {
         /** IF THE PASSWORD IS NOT VERIFIED USING PASSWORD_VERIFY THEN RETURN FAILED, OTHERWISE RETURN SUCCESS, IF NO RECORDS ARE FOUND RETURN NO RECORDS FOUND. */
@@ -51,7 +46,6 @@ function init()
       }
     }
   }
-
 
   if (isset($_POST['login'])) {
     $postArr = $stickyForm->validateForm($_POST, $elementsArr);
@@ -133,6 +127,7 @@ function init()
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
+            <br>
             <input type="submit" class="btn btn-primary" name="login" value="Login">
           </div>
         </div>
