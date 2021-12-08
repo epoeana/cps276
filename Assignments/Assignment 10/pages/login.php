@@ -62,12 +62,10 @@ function init()
     }
       }else{
         return getForm("",$postArr);
-        //echo "there was an error";
       }
 
   }else{
     $emptyArray = [];
-    //echo "No sumbmit button click";
     return getForm("", $elementsArr);
   }
 }
